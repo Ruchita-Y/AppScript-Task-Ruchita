@@ -1,0 +1,9 @@
+<div class="products-grid">
+  <div class="product-card" *ngFor="let product of products">
+          <img [src]="product.image" alt="Product Image" />
+          <h2>{{ product.title }}</h2>
+          <p>{{ product.price | currency }}</p>
+          <p *ngIf="product.stock === 0" class="out-of-stock">Out of Stock</p>
+          <p *ngIf="product.isNew" class="new-product">New Product</p>
+        </div>
+  </div>
